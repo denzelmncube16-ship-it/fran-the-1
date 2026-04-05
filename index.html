@@ -102,6 +102,12 @@ section {
   font-weight: bold;
 }
 
+.price-box ul {
+  text-align: left;
+  padding-left: 20px;
+  margin: 10px 0 15px 0;
+}
+
 /* LOGIN PAGE STYLE */
 .login {
   max-width: 400px;
@@ -120,17 +126,17 @@ input {
 /* MOBILE */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: row;
-    text-align: left;
+    flex-direction: column;
+    text-align: center;
   }
 
   header img {
-    width: 120px;
-    margin-right: 15px;
+    width: 200px;
+    margin-bottom: 15px;
   }
 
   header h1 {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 </style>
@@ -154,7 +160,7 @@ input {
   </div>
 </header>
 
-<!-- 🔥 SERVICES FIRST -->
+<!-- SERVICES -->
 <section>
 <h2>Our Services</h2>
 <div class="cards">
@@ -162,10 +168,11 @@ input {
   <div class="card">Media Marketing</div>
   <div class="card">Client Meetups</div>
   <div class="card">Analytics & Reporting</div>
+  <div class="card">Website Creation</div> <!-- NEW -->
 </div>
 </section>
 
-<!-- 🔥 PRICING WITH LOGIN REDIRECT -->
+<!-- PRICING -->
 <section>
 <h2>Pricing Plans</h2>
 
@@ -207,10 +214,21 @@ input {
     <button onclick="window.location.href='login.html'">Go Premium</button>
   </div>
 
+  <div class="price-box">
+    <h3>🌐 Website Creation</h3> <!-- NEW -->
+    <div class="price">R1,000 – R1,500</div>
+    <ul>
+      <li>Basic professional website</li>
+      <li>Full website ownership</li>
+      <li>Mobile-friendly & SEO-ready</li>
+    </ul>
+    <button onclick="window.location.href='login.html'">Get Website</button>
+  </div>
+
 </div>
 </section>
 
-<!-- 🔥 ABOUT US MOVED TO END -->
+<!-- ABOUT US -->
 <section id="contact">
 <h2>About Fran FlowLink</h2>
 <p>
