@@ -1,148 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fran FlowLink</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #e6f2ff; /* light blue background */
-      color: #003366; /* dark blue text */
-    }
-    header {
-      padding: 80px 20px;
-      background: linear-gradient(90deg, #00b300, #0066cc); /* green to blue gradient */
-      color: white;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    header button, header a.button {
-      padding: 15px 25px;
-      margin: 10px;
-      border: none;
-      border-radius: 5px;
-      background: #00b300;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    header button:hover, header a.button:hover {
-      background: #0066cc;
-    }
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 28px;
-      margin-bottom: 30px;
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .card {
-      background: #ccffcc; /* light green */
-      color: #003366;
-      padding: 25px;
-      border-radius: 10px;
-      width: 280px;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-    .card:hover {
-      background: #99e699;
-    }
-    .whatsapp {
-      display: inline-block;
-      padding: 15px 25px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    .whatsapp-sticky {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      z-index: 1000;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fran FlowLink</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e6f2ff;
+  color: #003366;
+}
+
+/* HEADER */
+header {
+  padding: 40px 20px;
+  background: linear-gradient(90deg, #00b300, #0066cc);
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 34px;
+  margin: 10px 0;
+}
+
+header p {
+  font-size: 18px;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+button, .button {
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #00b300;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover, .button:hover {
+  background: #0066cc;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* SERVICES */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #ccffcc;
+  padding: 20px;
+  border-radius: 10px;
+  width: 260px;
+}
+
+/* 🔥 PREMIUM PRICING TABLE */
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.price-box {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.price-box:hover {
+  transform: translateY(-5px);
+}
+
+.price-box h3 {
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.price-box ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.price-box button {
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* WHATSAPP */
+.whatsapp-sticky {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  header img {
+    width: 80px;
+    margin-right: 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Connecting Businesses with the Right Customers</h1>
-  <p>Fran FlowLink – Where Opportunities Flow</p>
-  <button onclick="scrollToContact()">Get Connected Today</button>
-  <a href="https://wa.me/27707891724" class="button" target="_blank">Book a Meetup</a>
+  <div class="header-container">
+    <img src="logo.png" alt="Fran FlowLink Logo">
+
+    <div>
+      <h1>Connecting Businesses with the Right Customers</h1>
+      <p>Fran FlowLink – Where Opportunities Flow</p>
+
+      <div class="buttons">
+        <button onclick="scrollToContact()">Get Started</button>
+        <a href="https://wa.me/27707891724" class="button" target="_blank">Book Meetup</a>
+      </div>
+    </div>
+  </div>
 </header>
 
 <section>
-  <h2>About Us</h2>
-  <p>Fran FlowLink connects businesses with real customers using targeted marketing, meetups, and smart engagement strategies.</p>
+<h2>About Us</h2>
+<p>We connect businesses with real customers using smart marketing, targeted outreach, and powerful networking strategies.</p>
 </section>
 
 <section>
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card" onclick="window.open('https://wa.me/27707891724')">
-      <h3>Business-Customer Linking</h3>
-      <p>We bring real clients directly to your business.</p>
-    </div>
-    <div class="card" onclick="window.open('https://wa.me/27707891724')">
-      <h3>Media Marketing</h3>
-      <p>Promote your brand on social platforms like TikTok and Instagram.</p>
-    </div>
-    <div class="card" onclick="window.open('https://wa.me/27707891724')">
-      <h3>Client Meetups</h3>
-      <p>We organize meetings to strengthen relationships and close deals.</p>
-    </div>
-  </div>
+<h2>Our Services</h2>
+<div class="cards">
+  <div class="card">Business-Customer Linking</div>
+  <div class="card">Media Marketing</div>
+  <div class="card">Client Meetups</div>
+  <div class="card">Analytics & Reporting</div>
+</div>
 </section>
 
+<!-- 🔥 PREMIUM PRICING -->
 <section>
-  <h2>Pricing</h2>
-  <div class="cards">
-    <div class="card">Basic: R100 – 3 Customers</div>
-    <div class="card">Growth: R250 – 10 Customers</div>
-    <div class="card">Premium: R500 – Full Promotion</div>
+<h2>Pricing Plans</h2>
+
+<div class="pricing">
+
+  <div class="price-box">
+    <h3>Business Linking</h3>
+    <div class="price">R500 / month</div>
+    <ul>
+      <li>Up to 50 customers</li>
+      <li>Targeted matching</li>
+    </ul>
+    <button onclick="contact()">Get Started</button>
   </div>
+
+  <div class="price-box">
+    <h3>Media Marketing</h3>
+    <div class="price">R700 – R1,500</div>
+    <ul>
+      <li>Social media promotion</li>
+      <li>Daily or weekly posts</li>
+    </ul>
+    <button onclick="contact()">Promote Now</button>
+  </div>
+
+  <div class="price-box">
+    <h3>Meetups</h3>
+    <div class="price">R300 – R1,000</div>
+    <ul>
+      <li>Client networking</li>
+      <li>Event coordination</li>
+    </ul>
+    <button onclick="contact()">Book Meetup</button>
+  </div>
+
+  <div class="price-box">
+    <h3>Analytics</h3>
+    <div class="price">R250 – R700</div>
+    <ul>
+      <li>Performance reports</li>
+      <li>Growth insights</li>
+    </ul>
+    <button onclick="contact()">View Insights</button>
+  </div>
+
+  <div class="price-box">
+    <h3>Strategy</h3>
+    <div class="price">R400/hr</div>
+    <ul>
+      <li>Business consulting</li>
+      <li>Growth strategy</li>
+    </ul>
+    <button onclick="contact()">Consult Now</button>
+  </div>
+
+  <div class="price-box">
+    <h3>🔥 Growth Plan</h3>
+    <div class="price">R3,500 / month</div>
+    <ul>
+      <li>All services included</li>
+      <li>Premium support</li>
+    </ul>
+    <button onclick="contact()">Go Premium</button>
+  </div>
+
+</div>
 </section>
 
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p>Call or WhatsApp us directly:</p>
-  <a href="https://wa.me/27707891724" class="whatsapp" target="_blank">Chat on WhatsApp</a>
+<h2>Contact Us</h2>
+<p>Chat with us directly on WhatsApp</p>
+<a href="https://wa.me/27707891724" class="button">Chat Now</a>
 </section>
 
-<a href="https://wa.me/27707891724" class="whatsapp-sticky" target="_blank">Chat Now</a>
+<a href="https://wa.me/27707891724" class="whatsapp-sticky">Chat</a>
 
 <script>
-  function scrollToContact() {
-    document.getElementById("contact").scrollIntoView({behavior: "smooth"});
-  }
+function scrollToContact() {
+  document.getElementById("contact").scrollIntoView({behavior: "smooth"});
+}
+
+function contact() {
+  window.open("https://wa.me/27707891724");
+}
 </script>
 
 </body>
