@@ -30,13 +30,16 @@ header {
 header img {
   width: 360px;
   margin-bottom: 15px;
-  animation: slide 3s infinite alternate;
+  animation: swing 5s ease-in-out forwards;
 }
 
-@keyframes slide {
-  0% { transform: translateX(-20px); }
-  50% { transform: translateX(20px); }
-  100% { transform: translateX(-20px); }
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(10deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(10deg); }
+  80% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
 }
 
 header h1 {
@@ -152,8 +155,6 @@ section {
       <p><strong>We will do it first</strong></p>
       <div class="buttons">
         <a href="https://wa.me/27707891724" class="button">Get Started</a>
-        <a href="https://wa.me/27707891724" class="button">Login</a>
-        <a href="https://wa.me/27707891724" class="button">Skip</a>
       </div>
     </div>
   </div>
