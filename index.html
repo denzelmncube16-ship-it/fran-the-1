@@ -11,6 +11,7 @@ body {
   font-family: Arial, sans-serif;
   background: #e6f2ff;
   color: #003366;
+  text-align: center;
 }
 
 /* HEADER */
@@ -24,20 +25,28 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 header img {
-  width: 360px; /* 🔥 3x bigger */
+  width: 360px;
   margin-bottom: 15px;
+  animation: slide 3s infinite alternate;
+}
+
+@keyframes slide {
+  0% { transform: translateX(-20px); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(-20px); }
 }
 
 header h1 {
   font-size: 34px;
+  margin: 10px 0;
 }
 
 header p {
   font-size: 18px;
+  margin-bottom: 15px;
 }
 
 .buttons {
@@ -63,7 +72,6 @@ button:hover, .button:hover {
 /* SECTIONS */
 section {
   padding: 60px 20px;
-  text-align: center;
 }
 
 /* SERVICES */
@@ -79,6 +87,12 @@ section {
   padding: 20px;
   border-radius: 10px;
   width: 260px;
+  text-align: left;
+}
+
+.card ul {
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
 /* PRICING */
@@ -95,6 +109,7 @@ section {
   padding: 25px;
   width: 280px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
 .price {
@@ -103,33 +118,12 @@ section {
 }
 
 .price-box ul {
-  text-align: left;
   padding-left: 20px;
   margin: 10px 0 15px 0;
 }
 
-/* LOGIN PAGE STYLE */
-.login {
-  max-width: 400px;
-  margin: auto;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
-
 /* MOBILE */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
   header img {
     width: 200px;
     margin-bottom: 15px;
@@ -137,6 +131,11 @@ input {
 
   header h1 {
     font-size: 24px;
+  }
+
+  .cards, .pricing {
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>
@@ -147,14 +146,14 @@ input {
 <header>
   <div class="header-container">
     <img src="logo.png" alt="Fran FlowLink Logo">
-
     <div>
       <h1>Connecting Businesses with the Right Customers</h1>
       <p>Fran FlowLink – Where Opportunities Flow</p>
-
+      <p><strong>We will do it first</strong></p>
       <div class="buttons">
-        <button onclick="scrollToContact()">Get Started</button>
-        <a href="login.html" class="button">Login</a>
+        <a href="https://wa.me/27707891724" class="button">Get Started</a>
+        <a href="https://wa.me/27707891724" class="button">Login</a>
+        <a href="https://wa.me/27707891724" class="button">Skip</a>
       </div>
     </div>
   </div>
@@ -164,65 +163,119 @@ input {
 <section>
 <h2>Our Services</h2>
 <div class="cards">
-  <div class="card">Business-Customer Linking</div>
-  <div class="card">Media Marketing</div>
-  <div class="card">Client Meetups</div>
-  <div class="card">Analytics & Reporting</div>
-  <div class="card">Website Creation</div> <!-- NEW -->
+  <div class="card">
+    Business-Customer Linking
+    <ul>
+      <li>Directly connect with customers</li>
+      <li>Grow your client base fast</li>
+    </ul>
+  </div>
+  <div class="card">
+    Media Marketing
+    <ul>
+      <li>Promote your business online</li>
+      <li>Reach targeted audiences</li>
+    </ul>
+  </div>
+  <div class="card">
+    Client Meetups
+    <ul>
+      <li>Arrange meetups & networking</li>
+      <li>Build trust with clients</li>
+    </ul>
+  </div>
+  <div class="card">
+    Analytics & Reporting
+    <ul>
+      <li>Track your business growth</li>
+      <li>Get actionable insights</li>
+    </ul>
+  </div>
+  <div class="card">
+    Website Creation
+    <ul>
+      <li>Basic professional website</li>
+      <li>Full website ownership</li>
+      <li>Mobile-friendly & SEO-ready</li>
+    </ul>
+  </div>
 </div>
 </section>
 
 <!-- PRICING -->
 <section>
 <h2>Pricing Plans</h2>
-
 <div class="pricing">
 
   <div class="price-box">
     <h3>Business Linking</h3>
     <div class="price">R500 / month</div>
-    <button onclick="window.location.href='login.html'">Get Started</button>
+    <ul>
+      <li>Direct customer connection</li>
+      <li>Grow client base</li>
+    </ul>
+    <button onclick="window.location.href='https://wa.me/27707891724'">Get Started</button>
   </div>
 
   <div class="price-box">
     <h3>Media Marketing</h3>
     <div class="price">R700 – R1,500</div>
-    <button onclick="window.location.href='login.html'">Promote Now</button>
+    <ul>
+      <li>Targeted campaigns</li>
+      <li>Boost online presence</li>
+    </ul>
+    <button onclick="window.location.href='https://wa.me/27707891724'">Promote Now</button>
   </div>
 
   <div class="price-box">
     <h3>Meetups</h3>
     <div class="price">R300 – R1,000</div>
-    <button onclick="window.location.href='login.html'">Book Meetup</button>
+    <ul>
+      <li>Networking events</li>
+      <li>Client engagement</li>
+    </ul>
+    <button onclick="window.location.href='https://wa.me/27707891724'">Book Meetup</button>
   </div>
 
   <div class="price-box">
     <h3>Analytics</h3>
     <div class="price">R250 – R700</div>
-    <button onclick="window.location.href='login.html'">View Insights</button>
+    <ul>
+      <li>Track performance</li>
+      <li>Data-driven insights</li>
+    </ul>
+    <button onclick="window.location.href='https://wa.me/27707891724'">View Insights</button>
   </div>
 
   <div class="price-box">
     <h3>Strategy</h3>
     <div class="price">R400/hr</div>
-    <button onclick="window.location.href='login.html'">Consult Now</button>
+    <ul>
+      <li>Business consultation</li>
+      <li>Strategic planning</li>
+    </ul>
+    <button onclick="window.location.href='https://wa.me/27707891724'">Consult Now</button>
   </div>
 
   <div class="price-box">
     <h3>🔥 Growth Plan</h3>
     <div class="price">R3,500 / month</div>
-    <button onclick="window.location.href='login.html'">Go Premium</button>
+    <ul>
+      <li>Full business growth</li>
+      <li>Premium support</li>
+    </ul>
+    <button onclick="window.location.href='https://wa.me/27707891724'">Go Premium</button>
   </div>
 
   <div class="price-box">
-    <h3>🌐 Website Creation</h3> <!-- NEW -->
+    <h3>🌐 Website Creation</h3>
     <div class="price">R1,000 – R1,500</div>
     <ul>
       <li>Basic professional website</li>
       <li>Full website ownership</li>
       <li>Mobile-friendly & SEO-ready</li>
     </ul>
-    <button onclick="window.location.href='login.html'">Get Website</button>
+    <button onclick="window.location.href='https://wa.me/27707891724'">Get Website</button>
   </div>
 
 </div>
@@ -240,17 +293,8 @@ Whether you're a startup or an established brand, we provide the tools and conne
 
 With services ranging from customer linking and media promotion to analytics and business strategy, Fran FlowLink ensures that every client receives measurable results and long-term value.
 </p>
-
 <a href="https://wa.me/27707891724" class="button">Chat on WhatsApp</a>
 </section>
-
-<a href="https://wa.me/27707891724" class="whatsapp-sticky">Chat</a>
-
-<script>
-function scrollToContact() {
-  document.getElementById("contact").scrollIntoView({behavior: "smooth"});
-}
-</script>
 
 </body>
 </html>
