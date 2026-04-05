@@ -28,13 +28,12 @@ header {
 }
 
 header img {
-  width: 120px;
+  width: 360px; /* 🔥 3x bigger */
   margin-bottom: 15px;
 }
 
 header h1 {
   font-size: 34px;
-  margin: 10px 0;
 }
 
 header p {
@@ -82,7 +81,7 @@ section {
   width: 260px;
 }
 
-/* 🔥 PREMIUM PRICING TABLE */
+/* PRICING */
 .pricing {
   display: flex;
   flex-wrap: wrap;
@@ -96,65 +95,42 @@ section {
   padding: 25px;
   width: 280px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.price-box:hover {
-  transform: translateY(-5px);
-}
-
-.price-box h3 {
-  margin-bottom: 10px;
 }
 
 .price {
   font-size: 22px;
   font-weight: bold;
+}
+
+/* LOGIN PAGE STYLE */
+.login {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
   margin: 10px 0;
 }
 
-.price-box ul {
-  text-align: left;
-  padding-left: 20px;
-}
-
-.price-box button {
-  margin-top: 15px;
-  width: 100%;
-}
-
-/* WHATSAPP */
-.whatsapp-sticky {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* 📱 MOBILE */
+/* MOBILE */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: row;
-    align-items: center;
     text-align: left;
   }
 
   header img {
-    width: 80px;
+    width: 120px;
     margin-right: 15px;
   }
 
   header h1 {
     font-size: 20px;
-  }
-
-  header p {
-    font-size: 14px;
   }
 }
 </style>
@@ -172,17 +148,13 @@ section {
 
       <div class="buttons">
         <button onclick="scrollToContact()">Get Started</button>
-        <a href="https://wa.me/27707891724" class="button" target="_blank">Book Meetup</a>
+        <a href="login.html" class="button">Login</a>
       </div>
     </div>
   </div>
 </header>
 
-<section>
-<h2>About Us</h2>
-<p>We connect businesses with real customers using smart marketing, targeted outreach, and powerful networking strategies.</p>
-</section>
-
+<!-- 🔥 SERVICES FIRST -->
 <section>
 <h2>Our Services</h2>
 <div class="cards">
@@ -193,7 +165,7 @@ section {
 </div>
 </section>
 
-<!-- 🔥 PREMIUM PRICING -->
+<!-- 🔥 PRICING WITH LOGIN REDIRECT -->
 <section>
 <h2>Pricing Plans</h2>
 
@@ -202,70 +174,56 @@ section {
   <div class="price-box">
     <h3>Business Linking</h3>
     <div class="price">R500 / month</div>
-    <ul>
-      <li>Up to 50 customers</li>
-      <li>Targeted matching</li>
-    </ul>
-    <button onclick="contact()">Get Started</button>
+    <button onclick="window.location.href='login.html'">Get Started</button>
   </div>
 
   <div class="price-box">
     <h3>Media Marketing</h3>
     <div class="price">R700 – R1,500</div>
-    <ul>
-      <li>Social media promotion</li>
-      <li>Daily or weekly posts</li>
-    </ul>
-    <button onclick="contact()">Promote Now</button>
+    <button onclick="window.location.href='login.html'">Promote Now</button>
   </div>
 
   <div class="price-box">
     <h3>Meetups</h3>
     <div class="price">R300 – R1,000</div>
-    <ul>
-      <li>Client networking</li>
-      <li>Event coordination</li>
-    </ul>
-    <button onclick="contact()">Book Meetup</button>
+    <button onclick="window.location.href='login.html'">Book Meetup</button>
   </div>
 
   <div class="price-box">
     <h3>Analytics</h3>
     <div class="price">R250 – R700</div>
-    <ul>
-      <li>Performance reports</li>
-      <li>Growth insights</li>
-    </ul>
-    <button onclick="contact()">View Insights</button>
+    <button onclick="window.location.href='login.html'">View Insights</button>
   </div>
 
   <div class="price-box">
     <h3>Strategy</h3>
     <div class="price">R400/hr</div>
-    <ul>
-      <li>Business consulting</li>
-      <li>Growth strategy</li>
-    </ul>
-    <button onclick="contact()">Consult Now</button>
+    <button onclick="window.location.href='login.html'">Consult Now</button>
   </div>
 
   <div class="price-box">
     <h3>🔥 Growth Plan</h3>
     <div class="price">R3,500 / month</div>
-    <ul>
-      <li>All services included</li>
-      <li>Premium support</li>
-    </ul>
-    <button onclick="contact()">Go Premium</button>
+    <button onclick="window.location.href='login.html'">Go Premium</button>
   </div>
 
 </div>
 </section>
 
+<!-- 🔥 ABOUT US MOVED TO END -->
 <section id="contact">
-<h2>Contact Us</h2>
-<p>Chat with us directly on WhatsApp</p>
-<a href="https://wa.me/27707891724" class="button">Chat Now</a>
+<h2>About Fran FlowLink</h2>
+<p>
+Fran FlowLink is a modern business connection platform designed to bridge the gap between businesses and real customers. 
+We focus on delivering targeted marketing, direct client engagement, and strategic growth solutions that help businesses scale faster.
+
+Our mission is to simplify how businesses find customers by combining smart marketing, data-driven insights, and real-world networking. 
+Whether you're a startup or an established brand, we provide the tools and connections you need to grow consistently.
+
+With services ranging from customer linking and media promotion to analytics and business strategy, Fran FlowLink ensures that every client receives measurable results and long-term value.
+</p>
+
+<a href="https://wa.me/27707891724" class="button">Chat on WhatsApp</a>
 </section>
 
 <a href="https://wa.me/27707891724" class="whatsapp-sticky">Chat</a>
@@ -273,10 +231,6 @@ section {
 <script>
 function scrollToContact() {
   document.getElementById("contact").scrollIntoView({behavior: "smooth"});
-}
-
-function contact() {
-  window.open("https://wa.me/27707891724");
 }
 </script>
 
