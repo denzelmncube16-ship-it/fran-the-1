@@ -6,55 +6,46 @@
 <title>Fran FlowLink</title>
 
 <style>
-/* BASE STYLES */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #e6f2ff;
   color: #003366;
-  scroll-behavior: smooth;
-  line-height: 1.6;
 }
 
 /* HEADER */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 40px 20px;
   background: linear-gradient(90deg, #00b300, #0066cc);
   color: white;
-  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 header img {
-  width: 200px;
-  display: block;
-  margin: 0 auto 20px;
-  transition: transform 1s ease-in-out;
+  width: 360px; /* 🔥 3x bigger */
+  margin-bottom: 15px;
 }
 
 header h1 {
-  font-size: 28px;
-  margin: 0 0 10px 0;
+  font-size: 34px;
 }
 
 header p {
-  font-size: 16px;
-  margin: 0 0 20px 0;
+  font-size: 18px;
 }
 
-header .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+.buttons {
+  margin-top: 15px;
 }
 
 button, .button {
-  padding: 12px 25px;
+  padding: 12px 20px;
   margin: 5px;
   border: none;
   border-radius: 5px;
@@ -63,8 +54,6 @@ button, .button {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  font-size: 16px;
-  transition: 0.3s;
 }
 
 button:hover, .button:hover {
@@ -73,10 +62,8 @@ button:hover, .button:hover {
 
 /* SECTIONS */
 section {
-  padding: 120px 20px 80px;
+  padding: 60px 20px;
   text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 /* SERVICES */
@@ -84,21 +71,14 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
+  gap: 20px;
 }
 
 .card {
   background: #ccffcc;
-  padding: 40px 20px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 10px;
   width: 260px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* PRICING */
@@ -106,105 +86,75 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
+  gap: 25px;
 }
 
 .price-box {
   background: white;
   border-radius: 12px;
-  padding: 30px 20px;
+  padding: 25px;
   width: 280px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.price-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.price-box ul {
-  text-align: left;
-  padding-left: 20px;
-  margin: 15px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .price {
   font-size: 22px;
   font-weight: bold;
+}
+
+/* LOGIN PAGE STYLE */
+.login {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
   margin: 10px 0;
 }
 
-/* ABOUT */
-#contact p {
-  max-width: 800px;
-  margin: 20px auto;
-  font-size: 16px;
-  line-height: 1.8;
-}
+/* MOBILE */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    text-align: left;
+  }
 
-/* WHATSAPP STICKY */
-.whatsapp-sticky {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #25d366;
-  color: white;
-  padding: 18px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
+  header img {
+    width: 120px;
+    margin-right: 15px;
+  }
 
-.whatsapp-sticky:hover {
-  transform: scale(1.1);
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 1024px) {
   header h1 {
-    font-size: 22px;
-  }
-
-  header p {
-    font-size: 14px;
-  }
-
-  .card, .price-box {
-    width: 100%;
-    max-width: 320px;
-  }
-}
-
-@media (max-width: 600px) {
-  header {
-    padding: 20px 10px;
-  }
-
-  .cards, .pricing {
-    gap: 20px;
+    font-size: 20px;
   }
 }
 </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header id="header">
-  <img id="logo" src="logo.png" alt="Fran FlowLink Logo">
-  <h1>Connecting Businesses with the Right Customers</h1>
-  <p>Fran FlowLink – Where Opportunities Flow</p>
-  <div class="buttons">
-    <button onclick="scrollToContact()">Get Started</button>
-    <a href="login.html" class="button" id="loginBtn">Login</a>
-    <button onclick="skipLanding()">Skip</button>
+<header>
+  <div class="header-container">
+    <img src="logo.png" alt="Fran FlowLink Logo">
+
+    <div>
+      <h1>Connecting Businesses with the Right Customers</h1>
+      <p>Fran FlowLink – Where Opportunities Flow</p>
+
+      <div class="buttons">
+        <button onclick="scrollToContact()">Get Started</button>
+        <a href="login.html" class="button">Login</a>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- SERVICES -->
+<!-- 🔥 SERVICES FIRST -->
 <section>
 <h2>Our Services</h2>
 <div class="cards">
@@ -212,82 +162,55 @@ section {
   <div class="card">Media Marketing</div>
   <div class="card">Client Meetups</div>
   <div class="card">Analytics & Reporting</div>
-  <div class="card">Website Creation</div>
 </div>
 </section>
 
-<!-- PRICING -->
+<!-- 🔥 PRICING WITH LOGIN REDIRECT -->
 <section>
 <h2>Pricing Plans</h2>
+
 <div class="pricing">
+
   <div class="price-box">
     <h3>Business Linking</h3>
     <div class="price">R500 / month</div>
-    <ul>
-      <li>Direct customer matching</li>
-      <li>Monthly reporting</li>
-    </ul>
     <button onclick="window.location.href='login.html'">Get Started</button>
   </div>
+
   <div class="price-box">
     <h3>Media Marketing</h3>
     <div class="price">R700 – R1,500</div>
-    <ul>
-      <li>Social media promotion</li>
-      <li>Content creation support</li>
-    </ul>
     <button onclick="window.location.href='login.html'">Promote Now</button>
   </div>
+
   <div class="price-box">
     <h3>Meetups</h3>
     <div class="price">R300 – R1,000</div>
-    <ul>
-      <li>Client meetup organization</li>
-      <li>Networking facilitation</li>
-    </ul>
     <button onclick="window.location.href='login.html'">Book Meetup</button>
   </div>
+
   <div class="price-box">
     <h3>Analytics</h3>
     <div class="price">R250 – R700</div>
-    <ul>
-      <li>Data tracking & insights</li>
-      <li>Monthly analytics reports</li>
-    </ul>
     <button onclick="window.location.href='login.html'">View Insights</button>
   </div>
+
   <div class="price-box">
     <h3>Strategy</h3>
     <div class="price">R400/hr</div>
-    <ul>
-      <li>Business growth planning</li>
-      <li>One-on-one consultation</li>
-    </ul>
     <button onclick="window.location.href='login.html'">Consult Now</button>
   </div>
+
   <div class="price-box">
     <h3>🔥 Growth Plan</h3>
     <div class="price">R3,500 / month</div>
-    <ul>
-      <li>Full-service growth support</li>
-      <li>Priority client assistance</li>
-    </ul>
     <button onclick="window.location.href='login.html'">Go Premium</button>
   </div>
-  <div class="price-box">
-    <h3>🌐 Website Creation</h3>
-    <div class="price">R1,000 – R1,500</div>
-    <ul>
-      <li>Basic professional website</li>
-      <li>Full website ownership</li>
-      <li>Mobile-friendly design</li>
-    </ul>
-    <button onclick="window.location.href='login.html'">Get Website</button>
-  </div>
+
 </div>
 </section>
 
-<!-- ABOUT -->
+<!-- 🔥 ABOUT US MOVED TO END -->
 <section id="contact">
 <h2>About Fran FlowLink</h2>
 <p>
@@ -299,32 +222,16 @@ Whether you're a startup or an established brand, we provide the tools and conne
 
 With services ranging from customer linking and media promotion to analytics and business strategy, Fran FlowLink ensures that every client receives measurable results and long-term value.
 </p>
+
 <a href="https://wa.me/27707891724" class="button">Chat on WhatsApp</a>
 </section>
 
-<!-- WHATSAPP STICKY -->
 <a href="https://wa.me/27707891724" class="whatsapp-sticky">Chat</a>
 
 <script>
-// Scroll to contact section
 function scrollToContact() {
   document.getElementById("contact").scrollIntoView({behavior: "smooth"});
 }
-
-// Skip landing
-function skipLanding() {
-  window.scrollTo({top: window.innerHeight, behavior: 'smooth'});
-}
-
-// Logo animation left to right
-let logo = document.getElementById('logo');
-let direction = 1; // 1: right, -1: left
-setInterval(() => {
-  let current = parseFloat(getComputedStyle(logo).transform.split(',')[4]) || 0;
-  if (current > 20) direction = -1;
-  if (current < -20) direction = 1;
-  logo.style.transform = `translateX(${current + direction}px)`;
-}, 50);
 </script>
 
 </body>
