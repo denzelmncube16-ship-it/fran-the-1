@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fran FlowLink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f0f0f;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px;
+      background: linear-gradient(black, #1a1a1a);
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      color: #ccc;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      background: gold;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #1c1c1c;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    a.whatsapp {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Connecting Businesses with the Right Customers</h1>
+  <p>Fran FlowLink – Where Opportunities Flow</p>
+
+  <button onclick="scrollToSection()">Get Connected Today</button>
+
+  <a href="https://wa.me/27707891724" class="whatsapp">Book a Meetup</a>
+</header>
+
+<section>
+  <h2>About Us</h2>
+  <p>
+    Fran FlowLink connects businesses with real customers using targeted marketing,
+    meetups, and smart engagement strategies.
+  </p>
+</section>
+
+<section>
+  <h2>Our Services</h2>
+
+  <div class="card">
+    <h3>Business-Customer Linking</h3>
+    <p>We bring you real clients ready to buy.</p>
+  </div>
+
+  <div class="card">
+    <h3>Media Marketing</h3>
+    <p>We promote your business on social platforms like TikTok.</p>
+  </div>
+
+  <div class="card">
+    <h3>Client Meetups</h3>
+    <p>We organize meetings to close deals faster.</p>
+  </div>
+
+</section>
+
+<section>
+  <h2>Pricing</h2>
+  <div class="card">
+    <p>Basic: R100 – 3 Customers</p>
+    <p>Growth: R250 – 10 Customers</p>
+    <p>Premium: R500 – Full Promotion</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Call or WhatsApp us directly</p>
+
+  <a href="https://wa.me/27707891724" class="whatsapp">
+    Chat on WhatsApp
+  </a>
+</section>
+
+<script>
+  function scrollToSection() {
+    document.getElementById("contact").scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+</script>
+
+</body>
+</html>
