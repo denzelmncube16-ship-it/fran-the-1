@@ -1,286 +1,820 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fran FlowLink</title><style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #e6f2ff;
-  color: #003366;
-  text-align: center;
-}
-
-/* HEADER */
-header {
-  padding: 40px 20px;
-  background: linear-gradient(90deg, #00b300, #0066cc);
-  color: white;
-}
-
-.header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-header img {
-  width: 360px;
-  margin-bottom: 15px;
-  animation: swing 5s ease-in-out forwards;
-}
-
-@keyframes swing {
-  0% { transform: rotate(0deg); }
-  20% { transform: rotate(10deg); }
-  40% { transform: rotate(-10deg); }
-  60% { transform: rotate(10deg); }
-  80% { transform: rotate(-10deg); }
-  100% { transform: rotate(0deg); }
-}
-
-header h1 {
-  font-size: 34px;
-  margin: 10px 0;
-}
-
-header p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.buttons {
-  margin-top: 15px;
-}
-
-button, .button {
-  padding: 12px 20px;
-  margin: 5px;
-  border: none;
-  border-radius: 5px;
-  background: #00b300;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-button:hover, .button:hover {
-  background: #0066cc;
-}
-
-/* SECTIONS */
-section {
-  padding: 60px 20px;
-}
-
-/* SERVICES */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.card {
-  background: #ccffcc;
-  padding: 20px;
-  border-radius: 10px;
-  width: 260px;
-  text-align: left;
-}
-
-.card ul {
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-/* PRICING */
-.pricing {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-}
-
-.price-box {
-  background: white;
-  border-radius: 12px;
-  padding: 25px;
-  width: 280px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-.price {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.price-box ul {
-  padding-left: 20px;
-  margin: 10px 0 15px 0;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  header img {
-    width: 200px;
-    margin-bottom: 15px;
+<title>Fran FlowLink — Where Opportunities Flow</title>
+<style>
+  :root{
+    --ink:#0A0D12;
+    --ink-soft:#12161D;
+    --paper:#F5F6F2;
+    --paper-2:#ECEEE8;
+    --mint:#33D48C;
+    --blue:#4C7EFF;
+    --ink-text:#0B0D10;
+    --muted:#6E7686;
+    --muted-light:#9AA2AE;
+    --line:rgba(255,255,255,0.12);
+    --line-dark:rgba(10,13,18,0.1);
+    --font-display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Helvetica,Arial,sans-serif;
+    --font-mono:ui-monospace,"SF Mono","Roboto Mono",Menlo,Consolas,monospace;
   }
 
-  header h1 {
-    font-size: 24px;
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--font-display);
+    background:var(--paper);
+    color:var(--ink-text);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
 
-  .cards, .pricing {
-    flex-direction: column;
-    align-items: center;
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
   }
-}
-</style></head><body><header>
-  <div class="header-container">
-    <img src="logo.png" alt="Fran FlowLink Logo">
-    <div>
-      <h1>Connecting Businesses with the Right Customers</h1>
-      <p>Fran FlowLink – Where Opportunities Flow</p>
-      <p><strong>We will do it first</strong></p>  <div class="buttons">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform" class="button">
-    Start Service
-    </a>
-  </div>
-</div>
 
-  </div>
-</header><!-- HOW IT WORKS --><section>
-<h2>How It Works</h2>
-<p>1. Choose a service</p>
-<p>2. Fill in your business details</p>
-<p>3. Submit your request through the form</p>
-<p>4. We start working immediately</p>
-<p>5. You get real results</p>
-</section><!-- SERVICES --><section>
-<h2>Our Services</h2>
-<div class="cards">
-  <div class="card">
-    Business-Customer Linking
-    <ul>
-      <li>Directly connect with customers</li>
-      <li>Grow your client base fast</li>
-    </ul>
-  </div>
-  <div class="card">
-    Media Marketing
-    <ul>
-      <li>Promote your business online</li>
-      <li>Reach targeted audiences</li>
-    </ul>
-  </div>
-  <div class="card">
-    Client Meetups
-    <ul>
-      <li>Arrange meetups & networking</li>
-      <li>Build trust with clients</li>
-    </ul>
-  </div>
-  <div class="card">
-    Analytics & Reporting
-    <ul>
-      <li>Track your business growth</li>
-      <li>Get actionable insights</li>
-    </ul>
-  </div>
-  <div class="card">
-    Website Creation
-    <ul>
-      <li>Basic professional website</li>
-      <li>Full website ownership</li>
-      <li>Mobile-friendly & SEO-ready</li>
-    </ul>
-  </div>
-</div>
-</section><!-- PRICING --><section>
-<h2>Pricing Plans</h2>
-<div class="pricing">  <div class="price-box">
-    <h3>Business Linking</h3>
-    <div class="price">R500 / month</div>
-    <ul>
-      <li>Direct customer connection</li>
-      <li>Grow client base</li>
-    </ul>
-    <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform'">
-    Start Now
-    </button>
-  </div>  <div class="price-box">
-    <h3>Media Marketing</h3>
-    <div class="price">R500 – R900</div>
-    <ul>
-      <li>Targeted campaigns</li>
-      <li>Boost online presence</li>
-    </ul>
-    <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform'">
-    Promote Now
-    </button>
-  </div>  <div class="price-box">
-    <h3>Meetups</h3>
-    <div class="price">R250 – R700</div>
-    <ul>
-      <li>Networking events</li>
-      <li>Client engagement</li>
-    </ul>
-    <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform'">
-    Book Meetup
-    </button>
-  </div>  <div class="price-box">
-    <h3>Analytics</h3>
-    <div class="price">R250 – R750</div>
-    <ul>
-      <li>Track performance</li>
-      <li>Data-driven insights</li>
-    </ul>
-    <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform'">
-    View Insights
-    </button>
-  </div>  <div class="price-box">
-    <h3>Strategy</h3>
-    <div class="price">R100/hr</div>
-    <ul>
-      <li>Business consultation</li>
-      <li>Strategic planning</li>
-    </ul>
-    <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform'">
-    Consult Now
-    </button>
-  </div>  <div class="price-box">
-    <h3>🔥 Growth Plan</h3>
-    <div class="price">R1000 / month</div>
-    <ul>
-      <li>Full business growth</li>
-      <li>Premium support</li>
-    </ul>
-    <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform'">
-    Go Premium
-    </button>
-  </div>  <div class="price-box">
-    <h3>🌐 Website Creation</h3>
-    <div class="price">R100 – R500</div>
-    <ul>
-      <li>Basic professional website</li>
-      <li>Full website ownership</li>
-      <li>Mobile-friendly & SEO-ready</li>
-    </ul>
-    <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform'">
-    Get Website
-    </button>
-  </div></div>
-</section><!-- ABOUT --><section>
-<h2>About Fran FlowLink</h2>
-<p>
-Fran FlowLink is a modern business connection service designed to bridge the gap between businesses and real customers.
-We deliver targeted marketing, direct client engagement, and strategic growth solutions to help businesses scale faster.Our mission is to simplify how businesses find customers using smart marketing, data-driven insights, and real-world networking.
+  /* ===== NAV ===== */
+  .nav{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 5vw;
+    transition:background .4s ease, backdrop-filter .4s ease, padding .4s ease, border-color .4s ease;
+    border-bottom:1px solid transparent;
+  }
+  .nav.scrolled{
+    background:rgba(10,13,18,0.72);
+    backdrop-filter:blur(16px) saturate(160%);
+    -webkit-backdrop-filter:blur(16px) saturate(160%);
+    padding:12px 5vw;
+    border-bottom:1px solid var(--line);
+  }
+  .nav-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:17px;
+    letter-spacing:-0.02em;
+    color:#fff;
+    text-decoration:none;
+  }
+  .nav-logo svg{width:26px;height:26px;}
+  .nav-links{
+    display:flex;
+    gap:34px;
+    list-style:none;
+    margin:0; padding:0;
+    font-size:13px;
+    font-weight:500;
+    color:rgba(255,255,255,0.8);
+  }
+  .nav-links a{text-decoration:none; transition:color .2s;}
+  .nav-links a:hover{color:#fff;}
+  .nav-cta{
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink);
+    background:#fff;
+    padding:9px 18px;
+    border-radius:100px;
+    text-decoration:none;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .nav-cta:hover{transform:translateY(-1px); box-shadow:0 8px 20px rgba(0,0,0,0.25);}
+  @media (max-width:820px){
+    .nav-links{display:none;}
+  }
 
-</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform" class="button">
-Start Your Growth Now
-</a>
-</section></body>
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+      radial-gradient(60% 50% at 50% 12%, rgba(76,126,255,0.16), transparent 70%),
+      radial-gradient(50% 40% at 80% 85%, rgba(51,212,140,0.12), transparent 70%),
+      var(--ink);
+    color:#fff;
+    padding:120px 6vw 100px;
+    overflow:hidden;
+  }
+  .hero-flow{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    opacity:0.55;
+    pointer-events:none;
+  }
+  .hero-flow path{
+    fill:none;
+    stroke-width:1.4;
+    stroke-linecap:round;
+  }
+  .flow-a{stroke:url(#flowGradA); stroke-dasharray:6 14; animation:dash 26s linear infinite;}
+  .flow-b{stroke:url(#flowGradB); stroke-dasharray:3 10; animation:dash 34s linear infinite reverse;}
+  @keyframes dash{to{stroke-dashoffset:-1000;}}
+
+  .eyebrow{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--mint);
+    margin:0 0 22px;
+    position:relative;
+    z-index:2;
+  }
+  .hero h1{
+    position:relative;
+    z-index:2;
+    font-size:clamp(38px,6.4vw,84px);
+    line-height:1.03;
+    letter-spacing:-0.03em;
+    font-weight:700;
+    margin:0 0 26px;
+    max-width:16ch;
+  }
+  .hero h1 .grad{
+    background:linear-gradient(100deg,var(--mint),var(--blue));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .hero p.sub{
+    position:relative;
+    z-index:2;
+    font-size:clamp(16px,2vw,20px);
+    color:rgba(255,255,255,0.68);
+    max-width:44ch;
+    line-height:1.55;
+    margin:0 0 40px;
+  }
+  .hero-actions{
+    position:relative;
+    z-index:2;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .btn-primary{
+    background:linear-gradient(100deg,var(--mint),var(--blue));
+    color:#08120d;
+    font-weight:700;
+    font-size:15px;
+    padding:15px 30px;
+    border-radius:100px;
+    text-decoration:none;
+    display:inline-block;
+    border:none;
+    cursor:pointer;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 30px rgba(51,212,140,0.28);}
+  .btn-ghost{
+    background:transparent;
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
+    padding:15px 28px;
+    border-radius:100px;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,0.28);
+    transition:background .25s ease, border-color .25s ease;
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.5);}
+
+  .hero-tag{
+    position:relative;
+    z-index:2;
+    margin-top:56px;
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:0.08em;
+    color:rgba(255,255,255,0.4);
+    text-transform:uppercase;
+  }
+
+  /* ===== REVEAL ===== */
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .8s ease, transform .8s ease;}
+  .reveal.is-visible{opacity:1; transform:none;}
+
+  /* ===== SECTION SHELL ===== */
+  section{position:relative;}
+  .shell{max-width:1180px; margin:0 auto; padding:0 6vw;}
+  .section-head{max-width:640px; margin:0 auto 64px; text-align:center;}
+  .section-head .eyebrow{color:var(--blue);}
+  .light .section-head .eyebrow{color:#1d8f63;}
+  .section-head h2{
+    font-size:clamp(30px,4.2vw,52px);
+    line-height:1.08;
+    letter-spacing:-0.025em;
+    font-weight:700;
+    margin:0 0 18px;
+  }
+  .section-head p{
+    font-size:17px;
+    line-height:1.6;
+    color:var(--muted);
+    margin:0;
+  }
+  .dark{background:var(--ink); color:#fff;}
+  .dark .section-head p{color:rgba(255,255,255,0.6);}
+  .light{background:var(--paper);}
+
+  /* ===== HOW IT WORKS ===== */
+  .flow-steps{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:0;
+    padding:80px 0 100px;
+    position:relative;
+  }
+  .flow-steps::before{
+    content:"";
+    position:absolute;
+    top:34px;
+    left:10%;
+    right:10%;
+    height:1px;
+    background:repeating-linear-gradient(90deg, var(--line-dark) 0 8px, transparent 8px 16px);
+  }
+  .step{
+    position:relative;
+    text-align:center;
+    padding:0 14px;
+  }
+  .step-num{
+    width:68px; height:68px;
+    margin:0 auto 22px;
+    border-radius:50%;
+    background:#fff;
+    border:1px solid var(--line-dark);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono);
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink-text);
+    position:relative;
+    z-index:2;
+    box-shadow:0 6px 18px rgba(10,13,18,0.06);
+  }
+  .step h3{font-size:15px; font-weight:700; margin:0 0 8px; letter-spacing:-0.01em;}
+  .step p{font-size:13.5px; color:var(--muted); line-height:1.5; margin:0;}
+  @media (max-width:900px){
+    .flow-steps{grid-template-columns:1fr; gap:36px;}
+    .flow-steps::before{display:none;}
+  }
+
+  /* ===== SERVICE SLIDES ===== */
+  .slide{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    padding:100px 0;
+    border-top:1px solid var(--line-dark);
+  }
+  .dark.slide{border-top:1px solid var(--line);}
+  .slide-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
+  }
+  .slide-grid.rev{grid-template-columns:1.1fr 0.9fr;}
+  .slide-grid.rev .slide-visual{order:2;}
+  .slide-index{
+    font-family:var(--font-mono);
+    font-size:13px;
+    color:var(--mint-txt,var(--blue));
+    letter-spacing:0.05em;
+    margin:0 0 20px;
+  }
+  .dark .slide-index{color:var(--mint);}
+  .slide-copy h3{
+    font-size:clamp(28px,3.4vw,42px);
+    line-height:1.1;
+    letter-spacing:-0.02em;
+    font-weight:700;
+    margin:0 0 20px;
+  }
+  .slide-copy p{
+    font-size:16.5px;
+    line-height:1.65;
+    color:var(--muted);
+    max-width:46ch;
+    margin:0 0 28px;
+  }
+  .dark .slide-copy p{color:rgba(255,255,255,0.62);}
+  .slide-list{list-style:none; margin:0 0 30px; padding:0; display:flex; flex-direction:column; gap:12px;}
+  .slide-list li{
+    font-size:14.5px;
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    color:var(--ink-text);
+  }
+  .dark .slide-list li{color:rgba(255,255,255,0.85);}
+  .slide-list li svg{flex:none; margin-top:3px;}
+  .slide-link{
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    color:var(--blue);
+  }
+  .dark .slide-link{color:var(--mint);}
+  .slide-link svg{transition:transform .2s ease;}
+  .slide-link:hover svg{transform:translateX(4px);}
+
+  .slide-visual{
+    position:relative;
+    aspect-ratio:4/3.1;
+    border-radius:22px;
+    overflow:hidden;
+    background:linear-gradient(160deg, var(--paper-2), #fff);
+    border:1px solid var(--line-dark);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .dark .slide-visual{background:linear-gradient(160deg,#171B22,#0E1116); border-color:var(--line);}
+  .slide-visual svg{width:62%; height:62%;}
+
+  @media (max-width:880px){
+    .slide-grid, .slide-grid.rev{grid-template-columns:1fr; gap:40px;}
+    .slide-grid.rev .slide-visual{order:0;}
+    .slide{min-height:auto; padding:70px 0;}
+  }
+
+  /* ===== PRICING ===== */
+  .pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+  }
+  .price-card{
+    background:#fff;
+    border:1px solid var(--line-dark);
+    border-radius:18px;
+    padding:32px 26px;
+    display:flex;
+    flex-direction:column;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .price-card:hover{transform:translateY(-4px); box-shadow:0 20px 40px rgba(10,13,18,0.08);}
+  .price-card.featured{
+    border:2px solid var(--mint);
+    background:linear-gradient(160deg,#fff,#F0FBF6);
+  }
+  .price-card .tag{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:#1d8f63;
+    background:#E4F8ED;
+    padding:5px 11px;
+    border-radius:100px;
+    display:inline-block;
+    margin-bottom:16px;
+    width:fit-content;
+  }
+  .price-card h3{font-size:18px; font-weight:700; margin:0 0 6px; letter-spacing:-0.01em;}
+  .price-card .amount{
+    font-family:var(--font-mono);
+    font-size:26px;
+    font-weight:600;
+    margin:0 0 18px;
+    letter-spacing:-0.01em;
+  }
+  .price-card ul{
+    list-style:none;
+    padding:0; margin:0 0 26px;
+    display:flex; flex-direction:column; gap:9px;
+    flex:1;
+  }
+  .price-card li{
+    font-size:13.5px;
+    color:var(--muted);
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+  }
+  .price-card li svg{flex:none; margin-top:3px;}
+  .price-cta{
+    text-align:center;
+    font-size:13.5px;
+    font-weight:700;
+    padding:12px;
+    border-radius:100px;
+    background:var(--ink);
+    color:#fff;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .price-cta:hover{background:#000; transform:translateY(-1px);}
+  .price-card.featured .price-cta{background:linear-gradient(100deg,var(--mint),var(--blue)); color:#08120d;}
+
+  /* ===== ABOUT ===== */
+  .about-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+  }
+  .about-quote{
+    font-size:clamp(22px,2.6vw,30px);
+    line-height:1.4;
+    letter-spacing:-0.015em;
+    font-weight:600;
+    margin:0;
+  }
+  .about-quote .accent{color:#1d8f63;}
+  .about-stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+  }
+  .stat{border-top:1px solid var(--line-dark); padding-top:16px;}
+  .stat .num{font-family:var(--font-mono); font-size:30px; font-weight:600; margin:0 0 4px;}
+  .stat .lbl{font-size:13px; color:var(--muted); margin:0;}
+  @media (max-width:880px){
+    .about-wrap{grid-template-columns:1fr; gap:44px;}
+  }
+
+  /* ===== CLOSING CTA ===== */
+  .closing{
+    background:var(--ink);
+    color:#fff;
+    text-align:center;
+    padding:130px 6vw;
+    position:relative;
+    overflow:hidden;
+  }
+  .closing h2{
+    font-size:clamp(32px,5vw,60px);
+    letter-spacing:-0.03em;
+    font-weight:700;
+    line-height:1.08;
+    margin:0 0 20px;
+    position:relative; z-index:2;
+  }
+  .closing p{
+    font-size:17px;
+    color:rgba(255,255,255,0.6);
+    max-width:40ch;
+    margin:0 auto 40px;
+    position:relative; z-index:2;
+  }
+  .closing-glow{
+    position:absolute;
+    top:50%; left:50%;
+    width:900px; height:900px;
+    transform:translate(-50%,-50%);
+    background:radial-gradient(circle, rgba(51,212,140,0.14), transparent 65%);
+    pointer-events:none;
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--ink);
+    color:rgba(255,255,255,0.5);
+    padding:34px 6vw 40px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+    font-size:13px;
+  }
+  .footer-logo{display:flex; align-items:center; gap:8px; color:#fff; font-weight:700; font-size:14px;}
+  .footer-links{display:flex; gap:22px; list-style:none; padding:0; margin:0;}
+  .footer-links a{text-decoration:none; color:rgba(255,255,255,0.5); transition:color .2s;}
+  .footer-links a:hover{color:#fff;}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 32 32" fill="none"><path d="M4 24C10 24 10 8 16 8C22 8 22 24 28 24" stroke="url(#navGrad)" stroke-width="2.6" stroke-linecap="round"/><circle cx="28" cy="24" r="2.6" fill="#33D48C"/><defs><linearGradient id="navGrad" x1="4" y1="16" x2="28" y2="16"><stop stop-color="#33D48C"/><stop offset="1" stop-color="#4C7EFF"/></linearGradient></defs></svg>
+    FlowLink
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Start service</a>
+</nav>
+
+<header class="hero">
+  <svg class="hero-flow" viewBox="0 0 1400 800" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="flowGradA" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#33D48C"/><stop offset="1" stop-color="#4C7EFF"/>
+      </linearGradient>
+      <linearGradient id="flowGradB" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#4C7EFF"/><stop offset="1" stop-color="#33D48C"/>
+      </linearGradient>
+    </defs>
+    <path class="flow-a" d="M-100 620 C 250 500, 380 700, 700 560 S 1150 420, 1500 520"/>
+    <path class="flow-b" d="M-100 220 C 300 340, 500 120, 780 260 S 1200 200, 1500 160"/>
+  </svg>
+
+  <p class="eyebrow reveal is-visible">Fran FlowLink</p>
+  <h1 class="reveal is-visible">Every customer is a decision<br>waiting to <span class="grad">happen.</span></h1>
+  <p class="sub reveal is-visible">We connect South African businesses with the customers actively looking for them — through direct linking, targeted marketing, real-world meetups, and honest analytics.</p>
+  <div class="hero-actions reveal is-visible">
+    <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Start your service</a>
+    <a class="btn-ghost" href="#services">See what we do</a>
+  </div>
+  <p class="hero-tag reveal is-visible">We will do it first</p>
+</header>
+
+<section class="light">
+  <div class="shell reveal">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2>From first click to first client.</h2>
+      <p>Five steps, no guesswork. You choose a service, we get to work the same day.</p>
+    </div>
+    <div class="flow-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Choose a service</h3>
+        <p>Pick the plan that fits where your business is right now.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Tell us about you</h3>
+        <p>Share your business details so we can tailor the approach.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Submit the form</h3>
+        <p>One short form is all it takes to get in the queue.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>We start immediately</h3>
+        <p>No onboarding calls, no delays — work begins the same day.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <h3>You see real results</h3>
+        <p>Track growth through clear, honest reporting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+
+  <div class="slide dark reveal">
+    <div class="shell slide-grid">
+      <div class="slide-copy">
+        <p class="slide-index">01 — Business linking</p>
+        <h3>Put your business in front of people who are already looking.</h3>
+        <p>We connect you directly with customers actively searching for what you offer, so every introduction has real intent behind it.</p>
+        <ul class="slide-list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#33D48C" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct customer connections</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#33D48C" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Faster client base growth</li>
+        </ul>
+        <a class="slide-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Start linking <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="slide-visual">
+        <svg viewBox="0 0 200 160"><path d="M10 130C60 130 60 40 100 40C140 40 140 130 190 130" stroke="url(#navGrad)" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="10" cy="130" r="6" fill="#4C7EFF"/><circle cx="190" cy="130" r="6" fill="#33D48C"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide light reveal">
+    <div class="shell slide-grid rev">
+      <div class="slide-copy">
+        <p class="slide-index">02 — Media marketing</p>
+        <h3>Get seen by the right audience, not just a bigger one.</h3>
+        <p>Targeted campaigns built around who actually buys from you — so your marketing budget works harder, not just louder.</p>
+        <ul class="slide-list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Targeted campaigns</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Stronger online presence</li>
+        </ul>
+        <a class="slide-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Start promoting <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="slide-visual">
+        <svg viewBox="0 0 200 160"><g stroke="#4C7EFF" stroke-width="2" fill="none" stroke-linecap="round"><circle cx="100" cy="80" r="14"/><circle cx="100" cy="80" r="34" opacity="0.5"/><circle cx="100" cy="80" r="54" opacity="0.25"/></g></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide dark reveal">
+    <div class="shell slide-grid">
+      <div class="slide-copy">
+        <p class="slide-index">03 — Client meetups</p>
+        <h3>Trust is built in the room, not the inbox.</h3>
+        <p>We arrange real meetups and networking moments that turn a name on a form into a relationship your business can rely on.</p>
+        <ul class="slide-list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#33D48C" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Networking events</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#33D48C" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Deeper client engagement</li>
+        </ul>
+        <a class="slide-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Book a meetup <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="slide-visual">
+        <svg viewBox="0 0 200 160"><g fill="none" stroke="url(#navGrad)" stroke-width="2.4"><circle cx="70" cy="70" r="20"/><circle cx="130" cy="70" r="20"/><path d="M70 90c0 20 60 20 60 0" stroke-linecap="round"/></g></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide light reveal">
+    <div class="shell slide-grid rev">
+      <div class="slide-copy">
+        <p class="slide-index">04 — Analytics and reporting</p>
+        <h3>Know exactly what's working, in plain numbers.</h3>
+        <p>Clear reporting on growth and engagement, so decisions come from data instead of guesswork.</p>
+        <ul class="slide-list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Growth tracking</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Actionable insights</li>
+        </ul>
+        <a class="slide-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">View insights <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="slide-visual">
+        <svg viewBox="0 0 200 160"><g fill="#4C7EFF"><rect x="30" y="90" width="18" height="50" rx="3"/><rect x="65" y="60" width="18" height="80" rx="3" fill="#33D48C"/><rect x="100" y="100" width="18" height="40" rx="3"/><rect x="135" y="40" width="18" height="100" rx="3" fill="#33D48C"/></g></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide dark reveal">
+    <div class="shell slide-grid">
+      <div class="slide-copy">
+        <p class="slide-index">05 — Website creation</p>
+        <h3>A website that's actually yours.</h3>
+        <p>A mobile-friendly, SEO-ready site built for your business — fully owned by you, not rented back to you every month.</p>
+        <ul class="slide-list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#33D48C" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Full ownership, no lock-in</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#33D48C" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Mobile-friendly and SEO-ready</li>
+        </ul>
+        <a class="slide-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Get a website <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="slide-visual">
+        <svg viewBox="0 0 200 160"><rect x="30" y="30" width="140" height="100" rx="8" fill="none" stroke="url(#navGrad)" stroke-width="2.4"/><line x1="30" y1="52" x2="170" y2="52" stroke="url(#navGrad)" stroke-width="2"/><circle cx="42" cy="41" r="3" fill="#33D48C"/><circle cx="54" cy="41" r="3" fill="#4C7EFF"/></svg>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="light" id="pricing">
+  <div class="shell reveal">
+    <div class="section-head">
+      <p class="eyebrow">Pricing</p>
+      <h2>Plans that scale with your growth.</h2>
+      <p>Start with what you need today. Every plan starts through the same simple form.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Business linking</h3>
+        <div class="amount">R500<span style="font-size:13px;color:var(--muted);font-weight:500;"> / month</span></div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct customer connection</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Grow your client base</li>
+        </ul>
+        <a class="price-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Start now</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Media marketing</h3>
+        <div class="amount">R500–R900</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Targeted campaigns</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Boost online presence</li>
+        </ul>
+        <a class="price-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Promote now</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Meetups</h3>
+        <div class="amount">R250–R700</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Networking events</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Client engagement</li>
+        </ul>
+        <a class="price-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Book meetup</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Analytics</h3>
+        <div class="amount">R250–R750</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Track performance</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Data-driven insights</li>
+        </ul>
+        <a class="price-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">View insights</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Strategy</h3>
+        <div class="amount">R100<span style="font-size:13px;color:var(--muted);font-weight:500;">/hr</span></div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Business consultation</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Strategic planning</li>
+        </ul>
+        <a class="price-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Consult now</a>
+      </div>
+
+      <div class="price-card featured">
+        <span class="tag">Most popular</span>
+        <h3>Growth plan</h3>
+        <div class="amount">R1000<span style="font-size:13px;color:var(--muted);font-weight:500;"> / month</span></div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Full business growth</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Premium support</li>
+        </ul>
+        <a class="price-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Go premium</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Website creation</h3>
+        <div class="amount">R100–R500</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Full site ownership</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="#1d8f63" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Mobile-friendly and SEO-ready</li>
+        </ul>
+        <a class="price-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Get website</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="about" style="padding:110px 0;">
+  <div class="shell reveal">
+    <div class="about-wrap">
+      <p class="about-quote">Fran FlowLink bridges the gap between businesses and <span class="accent">real customers</span> — through targeted marketing, direct engagement, and strategic growth built on data, not guesswork.</p>
+      <div class="about-stats">
+        <div class="stat"><p class="num">5</p><p class="lbl">Services under one roof</p></div>
+        <div class="stat"><p class="num">1</p><p class="lbl">Simple form to start</p></div>
+        <div class="stat"><p class="num">R100</p><p class="lbl">Entry point for any plan</p></div>
+        <div class="stat"><p class="num">Day 1</p><p class="lbl">We start working immediately</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing reveal">
+  <div class="closing-glow"></div>
+  <h2>Ready to make opportunities flow?</h2>
+  <p>Choose a service, fill in your details, and we start working the same day.</p>
+  <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdCSFC20_0x6eC3XLrT1xL7UCMdnouNbiPPeQ7hGA9lXXjcew/viewform">Start your growth now</a>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <svg viewBox="0 0 32 32" width="20" height="20" fill="none"><path d="M4 24C10 24 10 8 16 8C22 8 22 24 28 24" stroke="url(#navGrad)" stroke-width="2.6" stroke-linecap="round"/></svg>
+    FlowLink
+  </div>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <span>© 2026 Fran FlowLink. Where opportunities flow.</span>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('is-visible');
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
 </html>
